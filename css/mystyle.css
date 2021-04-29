@@ -1,0 +1,50 @@
+<tr>
+          <td><span>Phone</span></td>
+          <td>:</td>
+          <td><input type="text" name="u_code" value="<?php echo $code;?>" placeholder="Code" size="4">-<input type="text" name="u_number" value="<?php echo $number;?>" placeholder = "Number" size="10"> </td><td><lebel><?php echo $err_code;?></lebel><lebel><?php echo $err_number;?></lebel></td>
+        </tr>
+        <tr>
+          <td><span>Card:</span></td>
+          
+          <td><input type="text" name="u_card" placeholder="Card No"></td>
+        </tr>
+        
+        
+
+         <tr>
+        <td><lebel>Birth Date</lebel></td>
+        <td>:</td>
+        <td>
+        <select name="u_day">
+          <option disabled selected>Day</option>
+          <?php
+            for($i=1;$i<=31;$i++)
+            {
+              echo "<option>$i</option>";
+            }
+          ?>
+          </select>
+          <select name="u_month">
+          <option disabled selected>Month</option>
+          <?php
+            $mont= array("January","February","March","April","May","June","July","August","September","October","November","December");
+            for($j=0;$j<=count($mont);$j++)
+            {
+              
+              echo "<option>$mont[$j]</option>";
+            
+            }
+            
+          ?>
+        </select>
+        <select name="u_year">
+          <option disabled selected>Year</option>
+          <?php
+            for($k=1971;$k<=2040;$k++)
+            {
+              echo "<option>$k</option>";
+            }
+          ?>
+        </select>
+        </td>
+        </tr> 
